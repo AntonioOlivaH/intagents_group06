@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-9"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-9">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Alone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Establishment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Holiday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#In_group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infections"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Living_situation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Not_tested"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protective_gear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rate_above_15"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rate_below_15"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tested"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Testing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weekend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Workday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Alone"/>
+        <Class IRI="#Living_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#Country"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Establishment"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Holiday"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#In_group"/>
+        <Class IRI="#Living_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Infections"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Living_situation"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Not_tested"/>
+        <Class IRI="#Testing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Personal"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protective_gear"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rate_above_15"/>
+        <Class IRI="#Infections"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rate_below_15"/>
+        <Class IRI="#Infections"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tested"/>
+        <Class IRI="#Testing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Testing"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weekend"/>
+        <Class IRI="#Holiday"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Workday"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Alone"/>
+        <Class IRI="#In_group"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Country"/>
+        <Class IRI="#Establishment"/>
+        <Class IRI="#Infections"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Holiday"/>
+        <Class IRI="#Workday"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Not_tested"/>
+        <Class IRI="#Tested"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Personal"/>
+        <Class IRI="#Public"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Protective_gear"/>
+        <Class IRI="#Testing"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Rate_above_15"/>
+        <Class IRI="#Rate_below_15"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
