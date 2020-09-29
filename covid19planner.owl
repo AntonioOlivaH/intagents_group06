@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl">
-    <Prefix name="" IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-9"/>
+    <Prefix name="" IRI="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -25,46 +25,220 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AIDS"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Activity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Activity_preferences"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Age"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Airplane"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Alone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#American_football"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asthma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Basketball"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bookshop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boutique"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Breast_cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Breathless"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Busy_time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cafe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carpool"/>
     </Declaration>
     <Declaration>
         <Class IRI="#City"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Country"/>
+        <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Establishment"/>
+        <Class IRI="#Contact"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Holiday"/>
+        <Class IRI="#Coughing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Counter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Current_health_conditions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cycling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Desinfectant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Duration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eating"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Eating_disorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fifty_to_hundred"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Football"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Full_face_mask"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glasses"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gloves"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Habits"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Half_face_mask"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hockey"/>
     </Declaration>
     <Declaration>
         <Class IRI="#In_group"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Infections"/>
+        <Class IRI="#Individual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indoors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infection_rate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infection_test"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Less_than_hour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Less_than_two_hours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Library"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Liver_disease"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Living_situation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Lung_cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lung_quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mask"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#More_than_two_hours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non_busy_time"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Not_tested"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Number_people"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obligations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#One_to_ten"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Outdoors"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Personal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physical_form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Previous_health_conditions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prostate_cancer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Protective_gear"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Public"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public_holiday"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Racing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Rate_above_15"/>
@@ -73,60 +247,372 @@
         <Class IRI="#Rate_below_15"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Reading"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rugby"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Running"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shopping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shopping_centre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Smoking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sneezing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Symptom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Taxi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Team"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Team_size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ten_to_fifty"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Tested"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Testing"/>
+        <Class IRI="#Throat_pain"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Weekend"/>
+        <Class IRI="#Time_of_day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tram"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type_of_activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type_of_day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Walking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weekend_day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Weight"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Workday"/>
     </Declaration>
     <SubClassOf>
+        <Class IRI="#AIDS"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Activity"/>
-        <Class IRI="#Establishment"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Activity_preferences"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Age"/>
+        <Class IRI="#Physical_form"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airplane"/>
+        <Class IRI="#Public"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Alone"/>
         <Class IRI="#Living_situation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#American_football"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asthma"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Basketball"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boat"/>
+        <Class IRI="#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bookshop"/>
+        <Class IRI="#Reading"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boutique"/>
+        <Class IRI="#Shopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Breast_cancer"/>
+        <Class IRI="#Cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Breathless"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bus"/>
+        <Class IRI="#Public"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Busy_time"/>
+        <Class IRI="#Time_of_day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cafe"/>
+        <Class IRI="#Eating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cancer"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carpool"/>
+        <Class IRI="#Group"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#City"/>
-        <Class IRI="#Country"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Country"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Establishment"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <Class IRI="#Condition"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Holiday"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+        <Class IRI="#Contact"/>
+        <Class IRI="#Sports"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contact"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coughing"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Counter"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Current_health_conditions"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cycling"/>
+        <Class IRI="#Individual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cycling"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Desinfectant"/>
+        <Class IRI="#Protective_gear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disease"/>
+        <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drive"/>
+        <Class IRI="#Individual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Duration"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eating"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Eating_disorder"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fever"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fifty_to_hundred"/>
+        <Class IRI="#Number_people"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Football"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Full_face_mask"/>
+        <Class IRI="#Mask"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gender"/>
+        <Class IRI="#Physical_form"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glasses"/>
+        <Class IRI="#Protective_gear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gloves"/>
+        <Class IRI="#Protective_gear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Group"/>
+        <Class IRI="#Personal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Habits"/>
+        <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Half_face_mask"/>
+        <Class IRI="#Mask"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hockey"/>
+        <Class IRI="#Sport"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#In_group"/>
         <Class IRI="#Living_situation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Infections"/>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Personal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Sports"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indoors"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Infection_rate"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Infection_test"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Less_than_hour"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Less_than_two_hours"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Library"/>
+        <Class IRI="#Reading"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Liver_disease"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Living_situation"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lung_cancer"/>
+        <Class IRI="#Cancer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lung_quality"/>
+        <Class IRI="#Physical_form"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mask"/>
+        <Class IRI="#Protective_gear"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#More_than_two_hours"/>
+        <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non_busy_time"/>
+        <Class IRI="#Time_of_day"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Not_tested"/>
-        <Class IRI="#Testing"/>
+        <Class IRI="#Infection_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number_people"/>
+        <Class IRI="#Activity_preferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Obligations"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#One_to_ten"/>
+        <Class IRI="#Number_people"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Outdoors"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Personal"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physical_form"/>
+        <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Previous_health_conditions"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prostate_cancer"/>
+        <Class IRI="#Cancer"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Protective_gear"/>
@@ -137,60 +623,277 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Public_holiday"/>
+        <Class IRI="#Type_of_day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Racing"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Rate_above_15"/>
-        <Class IRI="#Infections"/>
+        <Class IRI="#Infection_rate"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rate_below_15"/>
-        <Class IRI="#Infections"/>
+        <Class IRI="#Infection_rate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Tested"/>
-        <Class IRI="#Testing"/>
+        <Class IRI="#Reading"/>
+        <Class IRI="#Activity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Testing"/>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#Eating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rugby"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Running"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shop"/>
+        <Class IRI="#Shopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shopping"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shopping_centre"/>
+        <Class IRI="#Shopping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Smoking"/>
+        <Class IRI="#Habits"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sneezing"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sport"/>
+        <Class IRI="#Sports"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sports"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symptom"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Weekend"/>
-        <Class IRI="#Holiday"/>
+        <Class IRI="#Taxi"/>
+        <Class IRI="#Public"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team"/>
+        <Class IRI="#Sports"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team_size"/>
+        <Class IRI="#Value"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ten_to_fifty"/>
+        <Class IRI="#Number_people"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tested"/>
+        <Class IRI="#Infection_test"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Throat_pain"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time_of_day"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train"/>
+        <Class IRI="#Public"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tram"/>
+        <Class IRI="#Public"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type_of_activity"/>
+        <Class IRI="#Activity_preferences"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type_of_day"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Value"/>
+        <Class IRI="#Sports"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Walking"/>
+        <Class IRI="#Individual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weekend_day"/>
+        <Class IRI="#Type_of_day"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Weight"/>
+        <Class IRI="#Physical_form"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Workday"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+        <Class IRI="#Type_of_day"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AIDS"/>
+        <Class IRI="#Asthma"/>
+        <Class IRI="#Cancer"/>
+        <Class IRI="#Eating_disorder"/>
+        <Class IRI="#Liver_disease"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Activity"/>
+        <Class IRI="#Restaurant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Activity_preferences"/>
+        <Class IRI="#Living_situation"/>
+        <Class IRI="#Obligations"/>
+        <Class IRI="#Previous_health_conditions"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Age"/>
+        <Class IRI="#Gender"/>
+        <Class IRI="#Lung_quality"/>
+        <Class IRI="#Weight"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Airplane"/>
+        <Class IRI="#Bus"/>
+        <Class IRI="#Taxi"/>
+        <Class IRI="#Train"/>
+        <Class IRI="#Tram"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Alone"/>
         <Class IRI="#In_group"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Country"/>
-        <Class IRI="#Establishment"/>
-        <Class IRI="#Infections"/>
+        <Class IRI="#American_football"/>
+        <Class IRI="#Basketball"/>
+        <Class IRI="#Cycling"/>
+        <Class IRI="#Football"/>
+        <Class IRI="#Hockey"/>
+        <Class IRI="#Racing"/>
+        <Class IRI="#Rugby"/>
+        <Class IRI="#Running"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Holiday"/>
-        <Class IRI="#Workday"/>
+        <Class IRI="#Boat"/>
+        <Class IRI="#Carpool"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Breast_cancer"/>
+        <Class IRI="#Lung_cancer"/>
+        <Class IRI="#Prostate_cancer"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Breathless"/>
+        <Class IRI="#Coughing"/>
+        <Class IRI="#Fever"/>
+        <Class IRI="#Sneezing"/>
+        <Class IRI="#Throat_pain"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Condition"/>
+        <Class IRI="#Infection_test"/>
+        <Class IRI="#Protective_gear"/>
+        <Class IRI="#Symptom"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Contact"/>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Sport"/>
+        <Class IRI="#Team"/>
+        <Class IRI="#Value"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Contact"/>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Team"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Contact"/>
+        <Class IRI="#Individual"/>
+        <Class IRI="#Team_size"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Counter"/>
+        <Class IRI="#Less_than_hour"/>
+        <Class IRI="#Less_than_two_hours"/>
+        <Class IRI="#More_than_two_hours"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cycling"/>
+        <Class IRI="#Drive"/>
+        <Class IRI="#Walking"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Desinfectant"/>
+        <Class IRI="#Glasses"/>
+        <Class IRI="#Gloves"/>
+        <Class IRI="#Mask"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Disease"/>
+        <Class IRI="#Habits"/>
+        <Class IRI="#Physical_form"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fifty_to_hundred"/>
+        <Class IRI="#One_to_ten"/>
+        <Class IRI="#Ten_to_fifty"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Full_face_mask"/>
+        <Class IRI="#Half_face_mask"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Group"/>
+        <Class IRI="#Individual"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Infection_test"/>
+        <Class IRI="#Protective_gear"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Living_situation"/>
+        <Class IRI="#Previous_health_conditions"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Not_tested"/>
         <Class IRI="#Tested"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Personal"/>
-        <Class IRI="#Public"/>
+        <Class IRI="#Number_people"/>
+        <Class IRI="#Type_of_activity"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Protective_gear"/>
-        <Class IRI="#Testing"/>
+        <Class IRI="#Personal"/>
+        <Class IRI="#Public"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Rate_above_15"/>
