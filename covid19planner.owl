@@ -121,6 +121,9 @@
         <Class IRI="#Disease"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Drinking"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Drive"/>
     </Declaration>
     <Declaration>
@@ -131,6 +134,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Eating_disorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Female"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Fever"/>
@@ -202,10 +208,16 @@
         <Class IRI="#Lung_quality"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Male"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Mask"/>
     </Declaration>
     <Declaration>
         <Class IRI="#More_than_two_hours"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Negative_result"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Non_busy_time"/>
@@ -230,6 +242,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Physical_form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Positive_result"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Previous_health_conditions"/>
@@ -295,9 +310,6 @@
         <Class IRI="#Taxi"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Team"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Team_size"/>
     </Declaration>
     <Declaration>
@@ -325,9 +337,6 @@
         <Class IRI="#Type_of_day"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Value"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Walking"/>
     </Declaration>
     <Declaration>
@@ -338,6 +347,30 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Workday"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCurrentHealth"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDisease"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSymptom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTakenTest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#livesWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#modifierProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#POsitive_test1"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AIDS"/>
@@ -440,10 +473,6 @@
         <Class IRI="#Sports"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Contact"/>
-        <Class IRI="#Value"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Coughing"/>
         <Class IRI="#Symptom"/>
     </SubClassOf>
@@ -454,10 +483,6 @@
     <SubClassOf>
         <Class IRI="#Current_health_conditions"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cycling"/>
-        <Class IRI="#Individual"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Cycling"/>
@@ -472,8 +497,12 @@
         <Class IRI="#Condition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Drinking"/>
+        <Class IRI="#Habits"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Drive"/>
-        <Class IRI="#Individual"/>
+        <Class IRI="#Sport"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Duration"/>
@@ -486,6 +515,10 @@
     <SubClassOf>
         <Class IRI="#Eating_disorder"/>
         <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Female"/>
+        <Class IRI="#Gender"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fever"/>
@@ -540,14 +573,6 @@
         <Class IRI="#Personal"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Individual"/>
-        <Class IRI="#Sports"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Individual"/>
-        <Class IRI="#Value"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Indoors"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
@@ -588,12 +613,20 @@
         <Class IRI="#Physical_form"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Male"/>
+        <Class IRI="#Gender"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Mask"/>
         <Class IRI="#Protective_gear"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#More_than_two_hours"/>
         <Class IRI="#Duration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Negative_result"/>
+        <Class IRI="#Tested"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Non_busy_time"/>
@@ -626,6 +659,10 @@
     <SubClassOf>
         <Class IRI="#Physical_form"/>
         <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Positive_result"/>
+        <Class IRI="#Tested"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Previous_health_conditions"/>
@@ -712,12 +749,8 @@
         <Class IRI="#Public"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Team"/>
-        <Class IRI="#Sports"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Team_size"/>
-        <Class IRI="#Value"/>
+        <Class IRI="#Sports"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ten_to_fifty"/>
@@ -752,12 +785,8 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Value"/>
-        <Class IRI="#Sports"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Walking"/>
-        <Class IRI="#Individual"/>
+        <Class IRI="#Sport"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Weekend_day"/>
@@ -781,16 +810,21 @@
     <DisjointClasses>
         <Class IRI="#AIDS"/>
         <Class IRI="#Asthma"/>
+        <Class IRI="#COVID-19"/>
         <Class IRI="#Cancer"/>
         <Class IRI="#Eating_disorder"/>
         <Class IRI="#Liver_disease"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Activity"/>
-        <Class IRI="#Restaurant"/>
+        <Class IRI="#City"/>
+        <Class IRI="#Indoors"/>
+        <Class IRI="#Infection_rate"/>
+        <Class IRI="#Outdoors"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Activity_preferences"/>
+        <Class IRI="#Current_health_conditions"/>
         <Class IRI="#Living_situation"/>
         <Class IRI="#Obligations"/>
         <Class IRI="#Previous_health_conditions"/>
@@ -820,15 +854,26 @@
         <Class IRI="#American_football"/>
         <Class IRI="#Basketball"/>
         <Class IRI="#Cycling"/>
+        <Class IRI="#Drive"/>
         <Class IRI="#Football"/>
         <Class IRI="#Hockey"/>
         <Class IRI="#Racing"/>
         <Class IRI="#Rugby"/>
         <Class IRI="#Running"/>
+        <Class IRI="#Walking"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Boat"/>
         <Class IRI="#Carpool"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Bookshop"/>
+        <Class IRI="#Library"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Boutique"/>
+        <Class IRI="#Shop"/>
+        <Class IRI="#Shopping_centre"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Breast_cancer"/>
@@ -843,38 +888,24 @@
         <Class IRI="#Throat_pain"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Busy_time"/>
+        <Class IRI="#Non_busy_time"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Cafe"/>
+        <Class IRI="#Restaurant"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Condition"/>
         <Class IRI="#Infection_test"/>
         <Class IRI="#Protective_gear"/>
         <Class IRI="#Symptom"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Contact"/>
-        <Class IRI="#Individual"/>
-        <Class IRI="#Sport"/>
-        <Class IRI="#Team"/>
-        <Class IRI="#Value"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Contact"/>
-        <Class IRI="#Individual"/>
-        <Class IRI="#Team"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Contact"/>
-        <Class IRI="#Individual"/>
-        <Class IRI="#Team_size"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Counter"/>
         <Class IRI="#Less_than_hour"/>
         <Class IRI="#Less_than_two_hours"/>
         <Class IRI="#More_than_two_hours"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Cycling"/>
-        <Class IRI="#Drive"/>
-        <Class IRI="#Walking"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Desinfectant"/>
@@ -886,6 +917,20 @@
         <Class IRI="#Disease"/>
         <Class IRI="#Habits"/>
         <Class IRI="#Physical_form"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Drinking"/>
+        <Class IRI="#Smoking"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Eating"/>
+        <Class IRI="#Reading"/>
+        <Class IRI="#Shopping"/>
+        <Class IRI="#Sports"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Female"/>
+        <Class IRI="#Male"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Fifty_to_hundred"/>
@@ -901,12 +946,12 @@
         <Class IRI="#Individual"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Infection_test"/>
-        <Class IRI="#Protective_gear"/>
+        <Class IRI="#Indoors"/>
+        <Class IRI="#Outdoors"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Living_situation"/>
-        <Class IRI="#Previous_health_conditions"/>
+        <Class IRI="#Negative_result"/>
+        <Class IRI="#Positive_result"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Not_tested"/>
@@ -921,9 +966,104 @@
         <Class IRI="#Public"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#Public_holiday"/>
+        <Class IRI="#Weekend_day"/>
+        <Class IRI="#Workday"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Rate_above_15"/>
         <Class IRI="#Rate_below_15"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Time_of_day"/>
+        <Class IRI="#Type_of_day"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Positive_result"/>
+        <NamedIndividual IRI="#POsitive_test1"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCurrentHealth"/>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDisease"/>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTakenTest"/>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#livesWith"/>
+        <ObjectProperty IRI="#relationalProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#modifierProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#relationalProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#livesWith"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#livesWith"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCurrentHealth"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDisease"/>
+        <Class IRI="#Current_health_conditions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <Class IRI="#Current_health_conditions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <Class IRI="#Disease"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTakenTest"/>
+        <Class IRI="#Current_health_conditions"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#livesWith"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCurrentHealth"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDisease"/>
+        <Class IRI="#Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSymptom"/>
+        <Class IRI="#Symptom"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTakenTest"/>
+        <Class IRI="#Not_tested"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTakenTest"/>
+        <Class IRI="#Tested"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#livesWith"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
