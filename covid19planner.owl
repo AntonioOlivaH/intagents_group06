@@ -208,9 +208,6 @@
         <Class IRI="#Number_people"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Obligations"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#One_to_ten"/>
     </Declaration>
     <Declaration>
@@ -251,6 +248,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risky_obligations"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Rugby"/>
@@ -587,10 +587,6 @@
         <Class IRI="#Activity_preferences"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Obligations"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#One_to_ten"/>
         <Class IRI="#Number_people"/>
     </SubClassOf>
@@ -645,6 +641,10 @@
     <SubClassOf>
         <Class IRI="#Restaurant"/>
         <Class IRI="#Eating"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Risky_obligations"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User_parameters"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rugby"/>
@@ -771,8 +771,8 @@
     <DisjointClasses>
         <Class IRI="#Activity_preferences"/>
         <Class IRI="#Living_situation"/>
-        <Class IRI="#Obligations"/>
         <Class IRI="#Previous_health_conditions"/>
+        <Class IRI="#Risky_obligations"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Age"/>
