@@ -169,13 +169,10 @@
         <ObjectProperty IRI="#isSimilarTo"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isTravellingvia"/>
+        <ObjectProperty IRI="#isTravellingVia"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#livesWith"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#mustBeTakenBy"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#DynamicMaxActivityDurationInHours"/>
@@ -1309,10 +1306,6 @@
         <NamedIndividual IRI="#User_5"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">5</Literal>
     </DataPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasObligation"/>
-        <ObjectProperty IRI="#mustBeTakenBy"/>
-    </InverseObjectProperties>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#isSimilarTo"/>
     </SymmetricObjectProperty>
@@ -1371,7 +1364,7 @@
         <Class IRI="#Activity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isTravellingvia"/>
+        <ObjectProperty IRI="#isTravellingVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1430,7 +1423,7 @@
         <Class IRI="#Activity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isTravellingvia"/>
+        <ObjectProperty IRI="#isTravellingVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
