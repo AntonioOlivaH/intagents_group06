@@ -376,6 +376,9 @@
         <NamedIndividual IRI="#Hockey"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Improper_Distancing"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#In_Group"/>
     </Declaration>
     <Declaration>
@@ -454,6 +457,9 @@
         <NamedIndividual IRI="#Private_Transportation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Proper_Distancing"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Prostate_Cancer"/>
     </Declaration>
     <Declaration>
@@ -479,6 +485,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Saturday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seating_Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seating_Group"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Seating_Single"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#See_Friends_Weekly"/>
@@ -987,6 +1002,10 @@
         <NamedIndividual IRI="#Hockey"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Location_parameters"/>
+        <NamedIndividual IRI="#Improper_Distancing"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#User_living_situation"/>
         <NamedIndividual IRI="#In_Group"/>
     </ClassAssertion>
@@ -1091,6 +1110,10 @@
         <NamedIndividual IRI="#Private_Transportation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Location_parameters"/>
+        <NamedIndividual IRI="#Proper_Distancing"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Cancer"/>
         <NamedIndividual IRI="#Prostate_Cancer"/>
     </ClassAssertion>
@@ -1125,6 +1148,18 @@
     <ClassAssertion>
         <Class IRI="#Weekend_day"/>
         <NamedIndividual IRI="#Saturday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location_parameters"/>
+        <NamedIndividual IRI="#Seating_Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location_parameters"/>
+        <NamedIndividual IRI="#Seating_Group"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location_parameters"/>
+        <NamedIndividual IRI="#Seating_Single"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#User_preferences"/>
@@ -1263,6 +1298,16 @@
         <NamedIndividual IRI="#Public_Transportation"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Acute_Bronchitis"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Adult"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Airplane"/>
         <NamedIndividual IRI="#Group_Transportation"/>
@@ -1271,6 +1316,16 @@
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Airplane"/>
         <NamedIndividual IRI="#Public_Transportation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Asthma"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Bad_Ventilation"/>
+        <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
@@ -1303,6 +1358,11 @@
         <NamedIndividual IRI="#Shopping"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Breast_Cancer"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Bus"/>
         <NamedIndividual IRI="#Group_Transportation"/>
@@ -1315,6 +1375,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Busy_Time"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#COVID-19"/>
         <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1333,6 +1398,16 @@
         <NamedIndividual IRI="#Private_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Child"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Coughing"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Drive_Alone"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
@@ -1341,6 +1416,11 @@
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Drive_Alone"/>
         <NamedIndividual IRI="#Private_Transportation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Female"/>
+        <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
@@ -1354,7 +1434,57 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Fever"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Friday"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Good_Ventilation"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Group_Transportation"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Heavy_Breathlessness"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Heavy_Coughing"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Heavy_Muscle_Ache"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Heavy_Sneezing"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Heavy_Throat_Pain"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#High_Fever"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Improper_Distancing"/>
         <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1363,9 +1493,74 @@
         <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Indoor_seating"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Kings_Day"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
         <NamedIndividual IRI="#Library"/>
         <NamedIndividual IRI="#Reading"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Low_Fever"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Lung_Cancer"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Male"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Minor_Breathlessness"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Minor_Coughing"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Minor_Muscle_Ache"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Minor_Sneezing"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Minor_Throat_Pain"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Monday"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Negative_Test"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#New_Years_Eve"/>
+        <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
@@ -1374,7 +1569,42 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Old"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#On_Weight"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Outdoor_seating"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Overweight"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Positive_Test"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Private_Transportation"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Proper_Distancing"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Prostate_Cancer"/>
         <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1388,14 +1618,59 @@
         <NamedIndividual IRI="#Eating"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Saturday"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Seating_Double"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Seating_Group"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Seating_Single"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
         <NamedIndividual IRI="#Shop"/>
         <NamedIndividual IRI="#Shopping"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Sinterklaasdag"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Smoking"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
         <NamedIndividual IRI="#Stadium"/>
         <NamedIndividual IRI="#Concert_Going"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Strong_Lungs"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Sunday"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Takeaway"/>
+        <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
@@ -1408,6 +1683,11 @@
         <NamedIndividual IRI="#Public_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Thursday"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Train"/>
         <NamedIndividual IRI="#Group_Transportation"/>
@@ -1426,11 +1706,31 @@
         <ObjectProperty IRI="#hasTransportationType"/>
         <NamedIndividual IRI="#Tram"/>
         <NamedIndividual IRI="#Public_Transportation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Tuesday"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Underweight"/>
+        <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#livesWith"/>
         <NamedIndividual IRI="#User_3"/>
         <NamedIndividual IRI="#User_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Weak_Lungs"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Wednesday"/>
+        <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#FirstName"/>
