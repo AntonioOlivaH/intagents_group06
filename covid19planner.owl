@@ -85,10 +85,16 @@
         <Class IRI="#Pulminory_disease"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Risk"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Risky_habits"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Safe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Safety"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sporting"/>
@@ -163,6 +169,9 @@
         <ObjectProperty IRI="#hasProtectiveGear"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasTransportationType"/>
     </Declaration>
     <Declaration>
@@ -209,9 +218,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#MaximumNumberOfParticipants"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#RiskFactor"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#UserID"/>
@@ -364,6 +370,9 @@
         <NamedIndividual IRI="#High_Fever"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#High_Risk"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Hockey"/>
     </Declaration>
     <Declaration>
@@ -385,10 +394,16 @@
         <NamedIndividual IRI="#Low_Fever"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Lung_Cancer"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Male"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Medium_Risk"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Meeting_People"/>
@@ -664,8 +679,16 @@
         <Class IRI="#Disease_type"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Risk"/>
+        <Class IRI="#Safety"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Risky_habits"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Safe"/>
+        <Class IRI="#Safety"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sporting"/>
@@ -690,6 +713,10 @@
     <SubClassOf>
         <Class IRI="#Type_of_day"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unsafe"/>
+        <Class IRI="#Safety"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#User_health_current"/>
@@ -742,6 +769,10 @@
         <Class IRI="#Liver_disease"/>
         <Class IRI="#Pulminory_disease"/>
         <Class IRI="#Syndrome"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Safe"/>
+        <Class IRI="#Unsafe"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Time_of_day"/>
@@ -948,6 +979,10 @@
         <NamedIndividual IRI="#High_Fever"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Risk"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Sporting"/>
         <NamedIndividual IRI="#Hockey"/>
     </ClassAssertion>
@@ -976,12 +1011,20 @@
         <NamedIndividual IRI="#Low_Fever"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Risk"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Cancer"/>
         <NamedIndividual IRI="#Lung_Cancer"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gender"/>
         <NamedIndividual IRI="#Male"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Risk"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Leisure"/>
@@ -1270,6 +1313,11 @@
         <NamedIndividual IRI="#Public_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Busy_Time"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
         <NamedIndividual IRI="#Cafe"/>
         <NamedIndividual IRI="#Eating"/>
@@ -1305,9 +1353,34 @@
         <NamedIndividual IRI="#Public_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Group_Transportation"/>
+        <NamedIndividual IRI="#High_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Individual_Transportation"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
         <NamedIndividual IRI="#Library"/>
         <NamedIndividual IRI="#Reading"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Non_Busy_Time"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Private_Transportation"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <NamedIndividual IRI="#Public_Transportation"/>
+        <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
@@ -1360,106 +1433,6 @@
         <NamedIndividual IRI="#User_5"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Alone"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Avoid_Small_Spaces"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Desinfectant"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Do_Group_Sport"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Do_Individual_Sport"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Eat_Inside"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Eat_Outside"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Facemask"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Glasses"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Gloves"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#In_Group"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Respirator"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.9</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#See_Friends_Weekly"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#See_Grandparents_Weekly"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Take_Child_To_School"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#Take_Granny_To_Doctor"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#FirstName"/>
         <NamedIndividual IRI="#User_1"/>
         <Literal>Lonnie</Literal>
@@ -1468,11 +1441,6 @@
         <DataProperty IRI="#LastName"/>
         <NamedIndividual IRI="#User_1"/>
         <Literal>Bregman</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_1"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#UserID"/>
@@ -1490,11 +1458,6 @@
         <Literal>Millinson</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_2"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#UserID"/>
         <NamedIndividual IRI="#User_2"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Literal>
@@ -1508,11 +1471,6 @@
         <DataProperty IRI="#LastName"/>
         <NamedIndividual IRI="#User_3"/>
         <Literal>Mättas</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_3"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#UserID"/>
@@ -1530,11 +1488,6 @@
         <Literal>Oliva</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_4"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#UserID"/>
         <NamedIndividual IRI="#User_4"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">4</Literal>
@@ -1550,39 +1503,9 @@
         <Literal>Mättas</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_5"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#UserID"/>
         <NamedIndividual IRI="#User_5"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_6"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_7"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_8"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#User_9"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#RiskFactor"/>
-        <NamedIndividual IRI="#With_High_Risk_Individuals"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActivity"/>
@@ -1614,6 +1537,10 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasProtectiveGear"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRiskLevel"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1686,6 +1613,30 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <ObjectUnionOf>
+            <Class IRI="#Age"/>
+            <Class IRI="#Covid_symptom"/>
+            <Class IRI="#Disease_type"/>
+            <Class IRI="#Gender"/>
+            <Class IRI="#Infection_test"/>
+            <Class IRI="#Location_parameters"/>
+            <Class IRI="#Location_type"/>
+            <Class IRI="#Lung_quality"/>
+            <Class IRI="#Risky_habits"/>
+            <Class IRI="#Time_of_day"/>
+            <Class IRI="#Transportation_type"/>
+            <Class IRI="#Type_of_day"/>
+            <Class IRI="#User_health_current"/>
+            <Class IRI="#User_health_previous"/>
+            <Class IRI="#User_living_situation"/>
+            <Class IRI="#User_obligations"/>
+            <Class IRI="#User_preferences"/>
+            <Class IRI="#User_protective_gear"/>
+            <Class IRI="#Weight"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTransportationType"/>
         <Class IRI="#Transportation_method"/>
     </ObjectPropertyDomain>
@@ -1744,6 +1695,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasProtectiveGear"/>
         <Class IRI="#User_protective_gear"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <Class IRI="#Risk"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTransportationType"/>
@@ -1813,10 +1768,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#RiskFactor"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#UserID"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -1895,10 +1846,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#MaximumNumberOfParticipants"/>
         <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#RiskFactor"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#UserID"/>
