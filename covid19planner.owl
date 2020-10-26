@@ -298,7 +298,7 @@
         <NamedIndividual IRI="#Cycling"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Desinfectant"/>
+        <NamedIndividual IRI="#Disinfectant"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Do_Group_Sport"/>
@@ -899,7 +899,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Desinfectant"/>
+        <NamedIndividual IRI="#Disinfectant"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#User_preferences"/>
