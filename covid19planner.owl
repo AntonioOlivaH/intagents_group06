@@ -124,9 +124,6 @@
         <Class IRI="#User_health_previous"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#User_living_situation"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#User_obligations"/>
     </Declaration>
     <Declaration>
@@ -674,10 +671,6 @@
         <Class IRI="#Disease_type"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Location_parameters"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Location_type"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
@@ -734,30 +727,6 @@
         <Class IRI="#Safety"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#User_health_current"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_health_previous"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_living_situation"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_obligations"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_preferences"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_protective_gear"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Weekend_day"/>
         <Class IRI="#Type_of_day"/>
     </SubClassOf>
@@ -812,10 +781,6 @@
     <ClassAssertion>
         <Class IRI="#Transportation_method"/>
         <NamedIndividual IRI="#Airplane"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#Alone"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sporting"/>
@@ -1004,10 +969,6 @@
     <ClassAssertion>
         <Class IRI="#Location_parameters"/>
         <NamedIndividual IRI="#Improper_Distancing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#In_Group"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Transportation_type"/>
@@ -1284,10 +1245,6 @@
     <ClassAssertion>
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Wednesday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#With_High_Risk_Individuals"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Group_Transportation"/>
@@ -1911,30 +1868,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProtectiveGear"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasRiskLevel"/>
-        <ObjectUnionOf>
-            <Class IRI="#Age"/>
-            <Class IRI="#Covid_symptom"/>
-            <Class IRI="#Disease_type"/>
-            <Class IRI="#Gender"/>
-            <Class IRI="#Infection_test"/>
-            <Class IRI="#Location_parameters"/>
-            <Class IRI="#Location_type"/>
-            <Class IRI="#Lung_quality"/>
-            <Class IRI="#Risky_habits"/>
-            <Class IRI="#Time_of_day"/>
-            <Class IRI="#Transportation_type"/>
-            <Class IRI="#Type_of_day"/>
-            <Class IRI="#User_health_current"/>
-            <Class IRI="#User_health_previous"/>
-            <Class IRI="#User_living_situation"/>
-            <Class IRI="#User_obligations"/>
-            <Class IRI="#User_preferences"/>
-            <Class IRI="#User_protective_gear"/>
-            <Class IRI="#Weight"/>
-        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTransportationType"/>
