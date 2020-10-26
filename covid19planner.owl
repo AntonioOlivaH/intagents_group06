@@ -31,9 +31,6 @@
         <Class IRI="#Activity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Activity_type"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Age"/>
     </Declaration>
     <Declaration>
@@ -71,9 +68,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Location_parameters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Location_type"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Lung_quality"/>
@@ -118,12 +112,6 @@
         <Class IRI="#Unsafe"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#User_health_current"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_health_previous"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#User_obligations"/>
     </Declaration>
     <Declaration>
@@ -152,9 +140,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLocationParameter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasLocationType"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasObligation"/>
@@ -589,19 +574,6 @@
         <NamedIndividual IRI="#With_High_Risk_Individuals"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-        <ObjectIntersectionOf>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasActivity"/>
-                <Class IRI="#Activity"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasLocationType"/>
-                <Class IRI="#Location_type"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Weekend_day"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Saturday"/>
@@ -619,10 +591,6 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <SubClassOf>
-        <Class IRI="#Activity_type"/>
-        <Class IRI="#Activity"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Age"/>
         <Class IRI="#Health_parameters"/>
     </SubClassOf>
@@ -632,7 +600,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Consuming"/>
-        <Class IRI="#Activity_type"/>
+        <Class IRI="#Activity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Covid_symptom"/>
@@ -664,15 +632,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Leisure"/>
-        <Class IRI="#Activity_type"/>
+        <Class IRI="#Activity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Liver_disease"/>
         <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Location_type"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lung_quality"/>
@@ -700,7 +664,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sporting"/>
-        <Class IRI="#Activity_type"/>
+        <Class IRI="#Activity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Syndrome"/>
@@ -811,11 +775,11 @@
         <NamedIndividual IRI="#Boat_In_Group"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Bookshop"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Boutique"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -835,7 +799,7 @@
         <NamedIndividual IRI="#COVID-19"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Cafe"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -983,7 +947,7 @@
         <NamedIndividual IRI="#Kings_Day"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Library"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1095,7 +1059,7 @@
         <NamedIndividual IRI="#Respirator"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Restaurant"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1131,7 +1095,7 @@
         <NamedIndividual IRI="#See_Grandparents_Weekly"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Shop"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1147,7 +1111,7 @@
         <NamedIndividual IRI="#Smoking"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Location_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Stadium"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1781,10 +1745,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasLocationType"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasObligation"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1839,7 +1799,10 @@
     </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasActivity"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+            <Class IRI="#User_obligations"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDoneActivity"/>
@@ -1847,23 +1810,19 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasHealth"/>
-        <Class IRI="#User_health_current"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasLocationParameter"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocationType"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasObligation"/>
-        <Class IRI="#User_obligations"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPreviousHealth"/>
-        <Class IRI="#User_health_previous"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProtectiveGear"/>
@@ -1914,12 +1873,8 @@
         <Class IRI="#Location_parameters"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLocationType"/>
-        <Class IRI="#Location_type"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasObligation"/>
-        <Class IRI="#Activity"/>
+        <Class IRI="#User_obligations"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPreviousHealth"/>
