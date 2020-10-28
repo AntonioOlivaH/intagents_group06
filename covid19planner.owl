@@ -569,6 +569,30 @@
         </ObjectOneOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Age"/>
         <Class IRI="#Health_parameters"/>
     </SubClassOf>
@@ -621,6 +645,10 @@
         <Class IRI="#Disease_type"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Location_parameters"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Lung_quality"/>
         <Class IRI="#Health_parameters"/>
     </SubClassOf>
@@ -633,12 +661,20 @@
         <Class IRI="#Disease_type"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Risk"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Risky_habits"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Safe"/>
         <Class IRI="#Scenario"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scenario"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sporting"/>
@@ -661,6 +697,18 @@
         <Class IRI="#Scenario"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#User_obligations"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User_preferences"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User_protective_gear"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Weekend_day"/>
         <Class IRI="#Type_of_day"/>
     </SubClassOf>
@@ -680,6 +728,8 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
         <Class IRI="#Activity"/>
         <Class IRI="#Location_parameters"/>
+        <Class IRI="#Risk"/>
+        <Class IRI="#Scenario"/>
         <Class IRI="#User_obligations"/>
         <Class IRI="#User_preferences"/>
         <Class IRI="#User_protective_gear"/>
@@ -1085,10 +1135,6 @@
         <NamedIndividual IRI="#Template_Safe"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Scenario"/>
-        <NamedIndividual IRI="#Template_Unsafe"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Thursday"/>
     </ClassAssertion>
@@ -1149,8 +1195,134 @@
         <NamedIndividual IRI="#Wednesday"/>
     </ClassAssertion>
     <DifferentIndividuals>
+        <NamedIndividual IRI="#Adult"/>
+        <NamedIndividual IRI="#Child"/>
+        <NamedIndividual IRI="#Old"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Avoid_Small_Spaces"/>
+        <NamedIndividual IRI="#Do_Group_Sport"/>
+        <NamedIndividual IRI="#Do_Individual_Sport"/>
+        <NamedIndividual IRI="#Eat_Inside"/>
+        <NamedIndividual IRI="#Eat_Outside"/>
+        <NamedIndividual IRI="#See_Friends_Weekly"/>
+        <NamedIndividual IRI="#See_Grandparents_Weekly"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bad_Ventilation"/>
+        <NamedIndividual IRI="#Good_Ventilation"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bookshop"/>
+        <NamedIndividual IRI="#Boutique"/>
+        <NamedIndividual IRI="#Cafe"/>
+        <NamedIndividual IRI="#Library"/>
+        <NamedIndividual IRI="#Restaurant"/>
+        <NamedIndividual IRI="#Shop"/>
+        <NamedIndividual IRI="#Stadium"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Busy_Time"/>
+        <NamedIndividual IRI="#Non_Busy_Time"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Coughing"/>
+        <NamedIndividual IRI="#Fever"/>
+        <NamedIndividual IRI="#Heavy_Breathlessness"/>
+        <NamedIndividual IRI="#Heavy_Coughing"/>
+        <NamedIndividual IRI="#Heavy_Muscle_Ache"/>
+        <NamedIndividual IRI="#Heavy_Sneezing"/>
+        <NamedIndividual IRI="#Heavy_Throat_Pain"/>
+        <NamedIndividual IRI="#High_Fever"/>
+        <NamedIndividual IRI="#Low_Fever"/>
+        <NamedIndividual IRI="#Minor_Breathlessness"/>
+        <NamedIndividual IRI="#Minor_Coughing"/>
+        <NamedIndividual IRI="#Minor_Muscle_Ache"/>
+        <NamedIndividual IRI="#Minor_Sneezing"/>
+        <NamedIndividual IRI="#Minor_Throat_Pain"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Disinfectant"/>
+        <NamedIndividual IRI="#Facemask"/>
+        <NamedIndividual IRI="#Glasses"/>
+        <NamedIndividual IRI="#Gloves"/>
+        <NamedIndividual IRI="#Respirator"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Female"/>
+        <NamedIndividual IRI="#Male"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Friday"/>
+        <NamedIndividual IRI="#Monday"/>
+        <NamedIndividual IRI="#Thursday"/>
+        <NamedIndividual IRI="#Tuesday"/>
+        <NamedIndividual IRI="#Wednesday"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Go_To_The_Gym"/>
+        <NamedIndividual IRI="#Take_Child_To_School"/>
+        <NamedIndividual IRI="#Take_Granny_To_Doctor"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
         <NamedIndividual IRI="#Group_Transportation"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#High_Risk"/>
+        <NamedIndividual IRI="#Low_Risk"/>
+        <NamedIndividual IRI="#Medium_Risk"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Improper_Distancing"/>
+        <NamedIndividual IRI="#Proper_Distancing"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Indoor_seating"/>
+        <NamedIndividual IRI="#Outdoor_seating"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Indoor_seating"/>
+        <NamedIndividual IRI="#Outdoor_seating"/>
+        <NamedIndividual IRI="#Takeaway"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Kings_Day"/>
+        <NamedIndividual IRI="#New_Years_Eve"/>
+        <NamedIndividual IRI="#Sinterklaasdag"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Negative_Test"/>
+        <NamedIndividual IRI="#Positive_Test"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#On_Weight"/>
+        <NamedIndividual IRI="#Overweight"/>
+        <NamedIndividual IRI="#Underweight"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Saturday"/>
+        <NamedIndividual IRI="#Sunday"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Seating_Double"/>
+        <NamedIndividual IRI="#Seating_Group"/>
+        <NamedIndividual IRI="#Seating_Single"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Strong_Lungs"/>
+        <NamedIndividual IRI="#Weak_Lungs"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#User_1"/>
+        <NamedIndividual IRI="#User_2"/>
+        <NamedIndividual IRI="#User_3"/>
+        <NamedIndividual IRI="#User_4"/>
+        <NamedIndividual IRI="#User_5"/>
+        <NamedIndividual IRI="#User_6"/>
+        <NamedIndividual IRI="#User_7"/>
+        <NamedIndividual IRI="#User_8"/>
+        <NamedIndividual IRI="#User_9"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
@@ -1553,7 +1725,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUser"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#isBusy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isGoingToLocation"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
