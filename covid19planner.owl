@@ -521,39 +521,35 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Unsafe"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasUser"/>
+        <ObjectUnionOf>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasDiseaseType"/>
-                <Class IRI="#Pulminory_disease"/>
+                <ObjectProperty IRI="#hasUser"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasDiseaseType"/>
+                    <Class IRI="#Pulminory_disease"/>
+                </ObjectSomeValuesFrom>
             </ObjectSomeValuesFrom>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Unsafe"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasUser"/>
             <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasGoneToLocation"/>
+                <ObjectProperty IRI="#hasUser"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasGoneToLocation"/>
+                    <ObjectMinCardinality cardinality="3">
+                        <ObjectProperty IRI="#hasLocationParameter"/>
+                        <ObjectHasValue>
+                            <ObjectProperty IRI="#hasRiskLevel"/>
+                            <NamedIndividual IRI="#High_Risk"/>
+                        </ObjectHasValue>
+                    </ObjectMinCardinality>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasUser"/>
                 <ObjectMinCardinality cardinality="3">
-                    <ObjectProperty IRI="#hasLocationParameter"/>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#hasRiskLevel"/>
-                        <NamedIndividual IRI="#High_Risk"/>
-                    </ObjectHasValue>
+                    <ObjectProperty IRI="#hasHealth"/>
+                    <Class IRI="#Covid_symptom"/>
                 </ObjectMinCardinality>
             </ObjectSomeValuesFrom>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Unsafe"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasUser"/>
-            <ObjectMinCardinality cardinality="3">
-                <ObjectProperty IRI="#hasHealth"/>
-                <Class IRI="#Covid_symptom"/>
-            </ObjectMinCardinality>
-        </ObjectSomeValuesFrom>
+        </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Weekend_day"/>
