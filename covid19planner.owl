@@ -100,9 +100,6 @@
         <Class IRI="#Time_of_day"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Transportation_method"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Transportation_type"/>
     </Declaration>
     <Declaration>
@@ -133,7 +130,7 @@
         <ObjectProperty IRI="#hasActivity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasDoneActivity"/>
+        <ObjectProperty IRI="#hasGoneToLocation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasHealth"/>
@@ -154,16 +151,13 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasTransportationType"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasTravelledVia"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isBusy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isDoingActivity"/>
+        <ObjectProperty IRI="#isGoingToLocation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isSimilarTo"/>
@@ -436,16 +430,10 @@
         <NamedIndividual IRI="#Positive_Test"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Private_Transportation"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Proper_Distancing"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Prostate_Cancer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Public_Transportation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Racing"/>
@@ -675,10 +663,6 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Transportation_method"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Transportation_type"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </SubClassOf>
@@ -743,10 +727,6 @@
         <NamedIndividual IRI="#Adult"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Airplane"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Sporting"/>
         <NamedIndividual IRI="#American_Football"/>
     </ClassAssertion>
@@ -767,14 +747,6 @@
         <NamedIndividual IRI="#Basketball"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Boat_Alone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Bookshop"/>
     </ClassAssertion>
@@ -787,10 +759,6 @@
         <NamedIndividual IRI="#Breast_Cancer"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Bus"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Time_of_day"/>
         <NamedIndividual IRI="#Busy_Time"/>
     </ClassAssertion>
@@ -801,10 +769,6 @@
     <ClassAssertion>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
         <NamedIndividual IRI="#Cafe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Carpool"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Age"/>
@@ -843,10 +807,6 @@
         <NamedIndividual IRI="#Drinking"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Drive_Alone"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#User_preferences"/>
         <NamedIndividual IRI="#Eat_Inside"/>
     </ClassAssertion>
@@ -865,10 +825,6 @@
     <ClassAssertion>
         <Class IRI="#Gender"/>
         <NamedIndividual IRI="#Female"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Ferry"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Covid_symptom"/>
@@ -895,7 +851,7 @@
         <NamedIndividual IRI="#Good_Ventilation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
         <NamedIndividual IRI="#Group_Transportation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -935,7 +891,7 @@
         <NamedIndividual IRI="#Improper_Distancing"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1031,20 +987,12 @@
         <NamedIndividual IRI="#Positive_Test"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Location_parameters"/>
         <NamedIndividual IRI="#Proper_Distancing"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Cancer"/>
         <NamedIndividual IRI="#Prostate_Cancer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Sporting"/>
@@ -1139,20 +1087,8 @@
         <NamedIndividual IRI="#Takeaway"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Taxi"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Thursday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Train"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Tram"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Workday"/>
@@ -1214,10 +1150,6 @@
         <NamedIndividual IRI="#Group_Transportation"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
     </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Private_Transportation"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Acute_Bronchitis"/>
@@ -1229,16 +1161,6 @@
         <NamedIndividual IRI="#Medium_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Airplane"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Airplane"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Asthma"/>
         <NamedIndividual IRI="#High_Risk"/>
@@ -1247,26 +1169,6 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Bad_Ventilation"/>
         <NamedIndividual IRI="#High_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Boat_Alone"/>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Boat_Alone"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
@@ -1284,16 +1186,6 @@
         <NamedIndividual IRI="#Medium_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Bus"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Bus"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Busy_Time"/>
         <NamedIndividual IRI="#High_Risk"/>
@@ -1309,16 +1201,6 @@
         <NamedIndividual IRI="#Eating"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Carpool"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Carpool"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Child"/>
         <NamedIndividual IRI="#Low_Risk"/>
@@ -1329,29 +1211,9 @@
         <NamedIndividual IRI="#Medium_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Drive_Alone"/>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Drive_Alone"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Female"/>
         <NamedIndividual IRI="#Low_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Ferry"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Ferry"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
@@ -1515,11 +1377,6 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
-        <NamedIndividual IRI="#Private_Transportation"/>
-        <NamedIndividual IRI="#Low_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Proper_Distancing"/>
         <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
@@ -1527,11 +1384,6 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Prostate_Cancer"/>
         <NamedIndividual IRI="#Low_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasRiskLevel"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-        <NamedIndividual IRI="#High_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasActivity"/>
@@ -1594,39 +1446,9 @@
         <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Taxi"/>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Taxi"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Thursday"/>
         <NamedIndividual IRI="#Low_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Train"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Train"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Tram"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <NamedIndividual IRI="#Tram"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
@@ -1733,10 +1555,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasDoneActivity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasHealth"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1761,19 +1579,11 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isBusy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isDoingActivity"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1805,7 +1615,7 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDoneActivity"/>
+        <ObjectProperty IRI="#hasGoneToLocation"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1829,10 +1639,6 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <Class IRI="#Transportation_method"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
@@ -1841,7 +1647,7 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isDoingActivity"/>
+        <ObjectProperty IRI="#isGoingToLocation"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1861,8 +1667,8 @@
         <Class IRI="#Activity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDoneActivity"/>
-        <Class IRI="#Activity"/>
+        <ObjectProperty IRI="#hasGoneToLocation"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasHealth"/>
@@ -1889,10 +1695,6 @@
         <Class IRI="#Risk"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTransportationType"/>
-        <Class IRI="#Transportation_type"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </ObjectPropertyRange>
@@ -1904,8 +1706,8 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#isDoingActivity"/>
-        <Class IRI="#Activity"/>
+        <ObjectProperty IRI="#isGoingToLocation"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isSimilarTo"/>
