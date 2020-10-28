@@ -34,6 +34,9 @@
         <Class IRI="#Age"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#COVID"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Cancer"/>
     </Declaration>
     <Declaration>
@@ -88,7 +91,7 @@
         <Class IRI="#Safe"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Safety"/>
+        <Class IRI="#Scenario"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sporting"/>
@@ -149,6 +152,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTravelledVia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUser"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isBusy"/>
@@ -529,8 +535,24 @@
         <NamedIndividual IRI="#Wednesday"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Whatever"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#With_High_Risk_Individuals"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Unsafe"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasUser"/>
+                <Class abbreviatedIRI="owl:Thing"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasHealth"/>
+                <NamedIndividual IRI="#COVID-19"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Weekend_day"/>
         <ObjectOneOf>
@@ -551,6 +573,10 @@
     <SubClassOf>
         <Class IRI="#Age"/>
         <Class IRI="#Health_parameters"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#COVID"/>
+        <Class IRI="#Pulminory_disease"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Cancer"/>
@@ -609,16 +635,12 @@
         <Class IRI="#Disease_type"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Risk"/>
-        <Class IRI="#Safety"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Risky_habits"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Safe"/>
-        <Class IRI="#Safety"/>
+        <Class IRI="#Scenario"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sporting"/>
@@ -638,7 +660,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Unsafe"/>
-        <Class IRI="#Safety"/>
+        <Class IRI="#Scenario"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Weekend_day"/>
@@ -659,6 +681,10 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
         <Class IRI="#Activity"/>
+        <Class IRI="#Location_parameters"/>
+        <Class IRI="#User_obligations"/>
+        <Class IRI="#User_preferences"/>
+        <Class IRI="#User_protective_gear"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Cancer"/>
@@ -729,7 +755,7 @@
         <NamedIndividual IRI="#Busy_Time"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Pulminory_disease"/>
+        <Class IRI="#COVID"/>
         <NamedIndividual IRI="#COVID-19"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1116,6 +1142,10 @@
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Wednesday"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scenario"/>
+        <NamedIndividual IRI="#Whatever"/>
+    </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Group_Transportation"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
@@ -1436,6 +1466,11 @@
         <NamedIndividual IRI="#User_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasHealth"/>
+        <NamedIndividual IRI="#User_9"/>
+        <NamedIndividual IRI="#COVID-19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Weak_Lungs"/>
         <NamedIndividual IRI="#High_Risk"/>
@@ -1444,6 +1479,11 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Wednesday"/>
         <NamedIndividual IRI="#Low_Risk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasUser"/>
+        <NamedIndividual IRI="#Whatever"/>
+        <NamedIndividual IRI="#User_9"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActivity"/>
@@ -1538,6 +1578,10 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUser"/>
+        <Class IRI="#Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#isBusy"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
     </ObjectPropertyDomain>
@@ -1592,6 +1636,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUser"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isBusy"/>
