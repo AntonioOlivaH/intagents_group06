@@ -154,9 +154,6 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasTakenCovidTest"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasTravelledVia"/>
     </Declaration>
     <Declaration>
@@ -187,12 +184,6 @@
         <NamedIndividual IRI="#Adult"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Airplane"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Alone"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#American_Football"/>
     </Declaration>
     <Declaration>
@@ -208,12 +199,6 @@
         <NamedIndividual IRI="#Basketball"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Boat_Alone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Bookshop"/>
     </Declaration>
     <Declaration>
@@ -223,9 +208,6 @@
         <NamedIndividual IRI="#Breast_Cancer"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Bus"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Busy_Time"/>
     </Declaration>
     <Declaration>
@@ -233,9 +215,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Cafe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Carpool"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Child"/>
@@ -265,9 +244,6 @@
         <NamedIndividual IRI="#Drinking"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Drive_Alone"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Eat_Inside"/>
     </Declaration>
     <Declaration>
@@ -281,9 +257,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Female"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ferry"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Fever"/>
@@ -335,9 +308,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Improper_Distancing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#In_Group"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Individual_Transportation"/>
@@ -487,9 +457,6 @@
         <NamedIndividual IRI="#Takeaway"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Taxi"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Template_Safe"/>
     </Declaration>
     <Declaration>
@@ -497,12 +464,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thursday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Train"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Tram"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Tuesday"/>
@@ -546,54 +507,17 @@
     <Declaration>
         <NamedIndividual IRI="#Wednesday"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#With_High_Risk_Individuals"/>
-    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Safe"/>
-        <ObjectUnionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
-                <ObjectComplementOf>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#hasHealth"/>
-                        <NamedIndividual IRI="#COVID-19"/>
-                    </ObjectHasValue>
-                </ObjectComplementOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasTakenCovidTest"/>
-                    <NamedIndividual IRI="#Negative_Test"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Unsafe"/>
-        <ObjectUnionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasUser"/>
+            <ObjectComplementOf>
                 <ObjectHasValue>
                     <ObjectProperty IRI="#hasHealth"/>
                     <NamedIndividual IRI="#COVID-19"/>
                 </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
-                <ObjectHasValue>
-                    <ObjectProperty IRI="#hasTakenCovidTest"/>
-                    <NamedIndividual IRI="#Positive_Test"/>
-                </ObjectHasValue>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
-                <ObjectExactCardinality cardinality="0">
-                    <ObjectProperty IRI="#hasTakenCovidTest"/>
-                </ObjectExactCardinality>
-            </ObjectSomeValuesFrom>
-        </ObjectUnionOf>
+            </ObjectComplementOf>
+        </ObjectAllValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Unsafe"/>
@@ -1161,6 +1085,14 @@
         <NamedIndividual IRI="#Takeaway"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Scenario"/>
+        <NamedIndividual IRI="#Template_Safe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scenario"/>
+        <NamedIndividual IRI="#Template_Unsafe"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Thursday"/>
     </ClassAssertion>
@@ -1621,10 +1553,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasTakenCovidTest"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1686,10 +1614,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasProtectiveGear"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTakenCovidTest"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1755,10 +1679,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <Class IRI="#Risk"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTakenCovidTest"/>
-        <Class IRI="#Infection_test"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTravelledVia"/>
