@@ -484,6 +484,9 @@
         <NamedIndividual IRI="#Taxi"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Template"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Thursday"/>
     </Declaration>
     <Declaration>
@@ -535,23 +538,29 @@
         <NamedIndividual IRI="#Wednesday"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Whatever"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#With_High_Risk_Individuals"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="#Safe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUser"/>
+            <ObjectComplementOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#hasHealth"/>
+                    <NamedIndividual IRI="#COVID-19"/>
+                </ObjectHasValue>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Unsafe"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#hasUser"/>
-                <Class abbreviatedIRI="owl:Thing"/>
-            </ObjectSomeValuesFrom>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUser"/>
             <ObjectHasValue>
                 <ObjectProperty IRI="#hasHealth"/>
                 <NamedIndividual IRI="#COVID-19"/>
             </ObjectHasValue>
-        </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Weekend_day"/>
@@ -1142,10 +1151,6 @@
         <Class IRI="#Workday"/>
         <NamedIndividual IRI="#Wednesday"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Scenario"/>
-        <NamedIndividual IRI="#Whatever"/>
-    </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Group_Transportation"/>
         <NamedIndividual IRI="#Individual_Transportation"/>
@@ -1446,6 +1451,11 @@
         <NamedIndividual IRI="#Low_Risk"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasUser"/>
+        <NamedIndividual IRI="#Template"/>
+        <NamedIndividual IRI="#User_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Thursday"/>
         <NamedIndividual IRI="#Low_Risk"/>
@@ -1479,11 +1489,6 @@
         <ObjectProperty IRI="#hasRiskLevel"/>
         <NamedIndividual IRI="#Wednesday"/>
         <NamedIndividual IRI="#Low_Risk"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasUser"/>
-        <NamedIndividual IRI="#Whatever"/>
-        <NamedIndividual IRI="#User_9"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasActivity"/>
