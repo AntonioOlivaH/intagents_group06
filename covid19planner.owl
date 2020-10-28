@@ -729,7 +729,6 @@
         <Class IRI="#Activity"/>
         <Class IRI="#Location_parameters"/>
         <Class IRI="#Risk"/>
-        <Class IRI="#Scenario"/>
         <Class IRI="#User_obligations"/>
         <Class IRI="#User_preferences"/>
         <Class IRI="#User_protective_gear"/>
