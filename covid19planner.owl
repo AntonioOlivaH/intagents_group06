@@ -145,6 +145,9 @@
         <ObjectProperty IRI="#hasObligation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasPreference"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPreviousHealth"/>
     </Declaration>
     <Declaration>
@@ -1708,6 +1711,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPreference"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPreviousHealth"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1784,6 +1791,10 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPreference"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPreviousHealth"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
@@ -1842,6 +1853,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasObligation"/>
         <Class IRI="#User_obligations"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPreference"/>
+        <Class IRI="#User_preferences"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPreviousHealth"/>
