@@ -100,9 +100,6 @@
         <Class IRI="#Time_of_day"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Transportation_type"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Type_of_day"/>
     </Declaration>
     <Declaration>
@@ -290,6 +287,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Gloves"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Go_To_The_Gym"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Good_Ventilation"/>
@@ -633,10 +633,6 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Transportation_type"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Type_of_day"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
     </SubClassOf>
@@ -815,6 +811,10 @@
     <ClassAssertion>
         <Class IRI="#User_protective_gear"/>
         <NamedIndividual IRI="#Gloves"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User_obligations"/>
+        <NamedIndividual IRI="#Go_To_The_Gym"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Location_parameters"/>
