@@ -1803,6 +1803,22 @@
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskLevel"/>
+        <Class IRI="#Location_parameters"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTravelledVia"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
     </ObjectPropertyDomain>
