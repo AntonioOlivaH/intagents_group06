@@ -73,7 +73,7 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
     </owl:ObjectProperty>
     
 
@@ -284,7 +284,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
-            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
@@ -320,9 +320,9 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known -->
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
@@ -509,7 +509,7 @@
                                                 <owl:complementOf>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID"/>
-                                                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known"/>
+                                                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
                                                     </owl:Restriction>
                                                 </owl:complementOf>
                                             </owl:Class>
@@ -1132,7 +1132,7 @@
     <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known">
-        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_Known"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
     </owl:NamedIndividual>
     
 
