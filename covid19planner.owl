@@ -724,13 +724,9 @@
         <Class IRI="#Type_of_day"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
         <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
         <Class IRI="#Activity"/>
-        <Class IRI="#Location_parameters"/>
         <Class IRI="#Risk"/>
         <Class IRI="#User_obligations"/>
         <Class IRI="#User_preferences"/>
