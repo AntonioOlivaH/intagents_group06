@@ -1,1539 +1,1886 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#"
      xml:base="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl">
-    <Prefix name="" IRI="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Activity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Activity_type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Cancer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Consuming"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Covid_symptom"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Disease_type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Eating_disorder"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Gender"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Health_parameters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Heart_disease"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Infection_test"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Leisure"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Liver_disease"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Location_parameters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Location_type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lung_quality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Public_holiday"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pulminory_disease"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Risky_habits"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sporting"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Syndrome"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Time_of_day"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Transportation_method"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Transportation_type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Type_of_day"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_health_current"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_health_previous"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_living_situation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_obligations"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_preferences"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#User_protective_gear"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Weekend_day"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Weight"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Workday"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasActivity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDoneActivity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasHealth"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasLocationParameter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasLocationType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasObligation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPreviousHealth"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasProtectiveGear"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasTravelledVia"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isBusy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isDoingActivity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isSimilarTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isTravellingvia"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#livesWith"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#mustBeTakenBy"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#DynamicMaxActivityDurationInHours"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#DynamicMaxNumberOfParticipants"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ExpectedActivityDurationInHours"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ExpectedNumberOfParticipants"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#FirstName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#FloorSpaceInSquareMeters"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#InfectionRate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#LastName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#MaximumNumberOfParticipants"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#UserID"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#AIDS"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Acute_Bronchitis"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Adult"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Airplane"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Alone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#American_Football"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Asthma"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Avoid_Small_Spaces"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Bad_Ventilation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Basketball"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Boat_Alone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Bookshop"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Boutique"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Breast_Cancer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Bus"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Busy_Time"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#COVID-19"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Cafe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Carpool"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Child"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Cinema_Going"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Concert_Going"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Coughing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Cycling"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Desinfectant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Do_Group_Sport"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Do_Individual_Sport"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Drinking"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Drive_Alone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Eat_Inside"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Eat_Outside"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Eating"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Facemask"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Female"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ferry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Fever"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Football"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Friday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Glasses"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Gloves"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Good_Ventilation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Heavy_Breathlessness"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Heavy_Coughing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Heavy_Muscle_Ache"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Heavy_Sneezing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Heavy_Throat_Pain"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#High_Fever"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Hockey"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#In_Group"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Indoor_seating"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Kings_Day"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Library"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Low_Fever"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Lung_Cancer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Male"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Meeting_People"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Minor_Breathlessness"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Minor_Coughing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Minor_Muscle_Ache"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Minor_Sneezing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Minor_Throat_Pain"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Monday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Negative_Test"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#New_Years_Eve"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Non_Busy_Time"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Non_Public_Transportation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Old"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#On_Weight"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Outdoor_seating"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Overweight"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Positive_Test"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Prostate_Cancer"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Racing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Reading"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Respirator"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Restaurant"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Rugby"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Running"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Saturday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#See_Friends_Weekly"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#See_Grandparents_Weekly"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Shop"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Shopping"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Sinterklaasdag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Smoking"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Stadium"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Strong_Lungs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Sunday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#TV_Watching"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Take_Child_To_School"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Take_Granny_To_Doctor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Takeaway"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Taxi"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Thursday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Train"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Tram"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Tuesday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Underweight"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_8"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#User_9"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Walking"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Weak_Lungs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Wednesday"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#With_High_Risk_Individuals"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-        <ObjectIntersectionOf>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasActivity"/>
-                <Class IRI="#Activity"/>
-            </ObjectExactCardinality>
-            <ObjectExactCardinality cardinality="1">
-                <ObjectProperty IRI="#hasLocationType"/>
-                <Class IRI="#Location_type"/>
-            </ObjectExactCardinality>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Weekend_day"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Saturday"/>
-            <NamedIndividual IRI="#Sunday"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Workday"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Friday"/>
-            <NamedIndividual IRI="#Monday"/>
-            <NamedIndividual IRI="#Thursday"/>
-            <NamedIndividual IRI="#Tuesday"/>
-            <NamedIndividual IRI="#Wednesday"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#Activity_type"/>
-        <Class IRI="#Activity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Age"/>
-        <Class IRI="#Health_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cancer"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Consuming"/>
-        <Class IRI="#Activity_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Covid_symptom"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Disease_type"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Eating_disorder"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Gender"/>
-        <Class IRI="#Health_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Health_parameters"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Heart_disease"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Infection_test"/>
-        <Class IRI="#Health_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Leisure"/>
-        <Class IRI="#Activity_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Liver_disease"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Location_parameters"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Location_type"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Lung_quality"/>
-        <Class IRI="#Health_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Public_holiday"/>
-        <Class IRI="#Type_of_day"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Pulminory_disease"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Risky_habits"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sporting"/>
-        <Class IRI="#Activity_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Syndrome"/>
-        <Class IRI="#Disease_type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Time_of_day"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Transportation_method"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Transportation_type"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Type_of_day"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_health_current"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_health_previous"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_living_situation"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_obligations"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_preferences"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#User_protective_gear"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Weekend_day"/>
-        <Class IRI="#Type_of_day"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Weight"/>
-        <Class IRI="#Health_parameters"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Workday"/>
-        <Class IRI="#Type_of_day"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <Class IRI="#Activity"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Cancer"/>
-        <Class IRI="#Eating_disorder"/>
-        <Class IRI="#Heart_disease"/>
-        <Class IRI="#Liver_disease"/>
-        <Class IRI="#Pulminory_disease"/>
-        <Class IRI="#Syndrome"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Time_of_day"/>
-        <Class IRI="#Type_of_day"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Weekend_day"/>
-        <Class IRI="#Workday"/>
-    </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#Syndrome"/>
-        <NamedIndividual IRI="#AIDS"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pulminory_disease"/>
-        <NamedIndividual IRI="#Acute_Bronchitis"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#Adult"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Airplane"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#Alone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#American_Football"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pulminory_disease"/>
-        <NamedIndividual IRI="#Asthma"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#Avoid_Small_Spaces"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_parameters"/>
-        <NamedIndividual IRI="#Bad_Ventilation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Basketball"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Boat_Alone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Boat_In_Group"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Bookshop"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Boutique"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cancer"/>
-        <NamedIndividual IRI="#Breast_Cancer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Bus"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Time_of_day"/>
-        <NamedIndividual IRI="#Busy_Time"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pulminory_disease"/>
-        <NamedIndividual IRI="#COVID-19"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Cafe"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Carpool"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#Child"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#Cinema_Going"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#Concert_Going"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Cycling"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Desinfectant"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#Do_Group_Sport"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#Do_Individual_Sport"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Consuming"/>
-        <NamedIndividual IRI="#Drinking"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Drive_Alone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#Eat_Inside"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#Eat_Outside"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Consuming"/>
-        <NamedIndividual IRI="#Eating"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Facemask"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Gender"/>
-        <NamedIndividual IRI="#Female"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Ferry"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Football"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Workday"/>
-        <NamedIndividual IRI="#Friday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Glasses"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Gloves"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_parameters"/>
-        <NamedIndividual IRI="#Good_Ventilation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Group_Transportation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Heavy_Breathlessness"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Heavy_Coughing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Heavy_Muscle_Ache"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Heavy_Sneezing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Heavy_Throat_Pain"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#High_Fever"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Hockey"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#In_Group"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Individual_Transportation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_parameters"/>
-        <NamedIndividual IRI="#Indoor_seating"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Public_holiday"/>
-        <NamedIndividual IRI="#Kings_Day"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Library"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Low_Fever"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cancer"/>
-        <NamedIndividual IRI="#Lung_Cancer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Gender"/>
-        <NamedIndividual IRI="#Male"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#Meeting_People"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Minor_Breathlessness"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Minor_Coughing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Minor_Muscle_Ache"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Minor_Sneezing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Covid_symptom"/>
-        <NamedIndividual IRI="#Minor_Throat_Pain"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Workday"/>
-        <NamedIndividual IRI="#Monday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Infection_test"/>
-        <NamedIndividual IRI="#Negative_Test"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Public_holiday"/>
-        <NamedIndividual IRI="#New_Years_Eve"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Time_of_day"/>
-        <NamedIndividual IRI="#Non_Busy_Time"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Non_Public_Transportation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Age"/>
-        <NamedIndividual IRI="#Old"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Weight"/>
-        <NamedIndividual IRI="#On_Weight"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_parameters"/>
-        <NamedIndividual IRI="#Outdoor_seating"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Weight"/>
-        <NamedIndividual IRI="#Overweight"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Infection_test"/>
-        <NamedIndividual IRI="#Positive_Test"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cancer"/>
-        <NamedIndividual IRI="#Prostate_Cancer"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_type"/>
-        <NamedIndividual IRI="#Public_Transportation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Racing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#Reading"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_protective_gear"/>
-        <NamedIndividual IRI="#Respirator"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Restaurant"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Rugby"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Running"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Weekend_day"/>
-        <NamedIndividual IRI="#Saturday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#See_Friends_Weekly"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_preferences"/>
-        <NamedIndividual IRI="#See_Grandparents_Weekly"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Shop"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#Shopping"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Public_holiday"/>
-        <NamedIndividual IRI="#Sinterklaasdag"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Risky_habits"/>
-        <NamedIndividual IRI="#Smoking"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_type"/>
-        <NamedIndividual IRI="#Stadium"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Lung_quality"/>
-        <NamedIndividual IRI="#Strong_Lungs"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Weekend_day"/>
-        <NamedIndividual IRI="#Sunday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Leisure"/>
-        <NamedIndividual IRI="#TV_Watching"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_obligations"/>
-        <NamedIndividual IRI="#Take_Child_To_School"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_obligations"/>
-        <NamedIndividual IRI="#Take_Granny_To_Doctor"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Location_parameters"/>
-        <NamedIndividual IRI="#Takeaway"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Taxi"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Workday"/>
-        <NamedIndividual IRI="#Thursday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Train"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Transportation_method"/>
-        <NamedIndividual IRI="#Tram"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Workday"/>
-        <NamedIndividual IRI="#Tuesday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Weight"/>
-        <NamedIndividual IRI="#Underweight"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_4"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_5"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_6"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_7"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_8"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-        <NamedIndividual IRI="#User_9"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sporting"/>
-        <NamedIndividual IRI="#Walking"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Lung_quality"/>
-        <NamedIndividual IRI="#Weak_Lungs"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Workday"/>
-        <NamedIndividual IRI="#Wednesday"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#User_living_situation"/>
-        <NamedIndividual IRI="#With_High_Risk_Individuals"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Bookshop"/>
-        <NamedIndividual IRI="#Reading"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Boutique"/>
-        <NamedIndividual IRI="#Shopping"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Cafe"/>
-        <NamedIndividual IRI="#Eating"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Library"/>
-        <NamedIndividual IRI="#Reading"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Restaurant"/>
-        <NamedIndividual IRI="#Eating"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Shop"/>
-        <NamedIndividual IRI="#Shopping"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasActivity"/>
-        <NamedIndividual IRI="#Stadium"/>
-        <NamedIndividual IRI="#Concert_Going"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#livesWith"/>
-        <NamedIndividual IRI="#User_3"/>
-        <NamedIndividual IRI="#User_5"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#FirstName"/>
-        <NamedIndividual IRI="#User_1"/>
-        <Literal>Lonnie</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#LastName"/>
-        <NamedIndividual IRI="#User_1"/>
-        <Literal>Bregman</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#UserID"/>
-        <NamedIndividual IRI="#User_1"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#FirstName"/>
-        <NamedIndividual IRI="#User_2"/>
-        <Literal>Elizabeth</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#LastName"/>
-        <NamedIndividual IRI="#User_2"/>
-        <Literal>Millinson</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#UserID"/>
-        <NamedIndividual IRI="#User_2"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#FirstName"/>
-        <NamedIndividual IRI="#User_3"/>
-        <Literal>Otto</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#LastName"/>
-        <NamedIndividual IRI="#User_3"/>
-        <Literal>Mättas</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#UserID"/>
-        <NamedIndividual IRI="#User_3"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#FirstName"/>
-        <NamedIndividual IRI="#User_4"/>
-        <Literal>Antonio</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#LastName"/>
-        <NamedIndividual IRI="#User_4"/>
-        <Literal>Oliva</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#UserID"/>
-        <NamedIndividual IRI="#User_4"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#FirstName"/>
-        <NamedIndividual IRI="#User_5"/>
-        <Literal>Ingel</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#LastName"/>
-        <NamedIndividual IRI="#User_5"/>
-        <Literal>Mättas</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#UserID"/>
-        <NamedIndividual IRI="#User_5"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#unsignedInt">5</Literal>
-    </DataPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#hasObligation"/>
-        <ObjectProperty IRI="#mustBeTakenBy"/>
-    </InverseObjectProperties>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="#isSimilarTo"/>
-    </SymmetricObjectProperty>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="#livesWith"/>
-    </SymmetricObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#livesWith"/>
-    </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasActivity"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDoneActivity"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasHealth"/>
-        <Class IRI="#User_health_current"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocationParameter"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLocationType"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasObligation"/>
-        <Class IRI="#User_obligations"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPreviousHealth"/>
-        <Class IRI="#User_health_previous"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasProtectiveGear"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasTravelledVia"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isBusy"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isDoingActivity"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isSimilarTo"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#isTravellingvia"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#livesWith"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasActivity"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDoneActivity"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasHealth"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLocationParameter"/>
-        <Class IRI="#Location_parameters"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLocationType"/>
-        <Class IRI="#Location_type"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasObligation"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPreviousHealth"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasProtectiveGear"/>
-        <Class IRI="#User_protective_gear"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasTravelledVia"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isBusy"/>
-        <ObjectUnionOf>
-            <Class IRI="#Public_holiday"/>
-            <Class IRI="#Weekend_day"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isDoingActivity"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isSimilarTo"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#isTravellingvia"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#livesWith"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#FirstName"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#InfectionRate"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#LastName"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#UserID"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="#DynamicMaxActivityDurationInHours"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#DynamicMaxNumberOfParticipants"/>
-        <Class IRI="#Activity"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ExpectedActivityDurationInHours"/>
-        <Class IRI="#User_preferences"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ExpectedNumberOfParticipants"/>
-        <Class IRI="#User_preferences"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#FirstName"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#FloorSpaceInSquareMeters"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#InfectionRate"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#LastName"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#MaximumNumberOfParticipants"/>
-        <Class IRI="#Activity"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#UserID"/>
-        <Class IRI="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#DynamicMaxActivityDurationInHours"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#DynamicMaxNumberOfParticipants"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ExpectedActivityDurationInHours"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ExpectedNumberOfParticipants"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#FirstName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#FloorSpaceInSquareMeters"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#InfectionRate"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#LastName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#MaximumNumberOfParticipants"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#UserID"/>
-        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
-    </DataPropertyRange>
-</Ontology>
+     xmlns:unti="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasActivity -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasActivity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasDiseaseType -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasDiseaseType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasGoneToLocation -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasGoneToLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasLocationParameter -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasLocationParameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasObligation -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasObligation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasPreference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasPreviousHealth -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasPreviousHealth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasProtectiveGear -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasProtectiveGear">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasRiskLevel -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasRiskLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasTravelledVia -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasTravelledVia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isBusy -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isBusy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weekend_day"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isGoingToLocation -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isGoingToLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isSimilarTo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isSimilarTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isTravellingVia -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#isTravellingVia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#livesWith -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#livesWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risky_habits"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+        </owl:disjointUnionOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Age -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Age">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Consuming -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Consuming">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating_disorder"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heart_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Liver_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Syndrome"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating_disorder -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating_disorder">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gender -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gender">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heart_disease -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heart_disease">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Infection_test -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Infection_test">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Liver_disease -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Liver_disease">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_quality -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_quality">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risky_habits -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risky_habits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Safe -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Safe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+                                            <owl:Class>
+                                                <owl:complementOf>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                                                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19"/>
+                                                    </owl:Restriction>
+                                                </owl:complementOf>
+                                            </owl:Class>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <owl:Class>
+                                                <owl:complementOf>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID"/>
+                                                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
+                                                    </owl:Restriction>
+                                                </owl:complementOf>
+                                            </owl:Class>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasProtectiveGear"/>
+                                                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Facemask"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Syndrome -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Syndrome">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Time_of_day -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Time_of_day">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Unsafe -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Unsafe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasDiseaseType"/>
+                                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasGoneToLocation"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasLocationParameter"/>
+                                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                                        <owl:onClass>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasRiskLevel"/>
+                                                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+                                            </owl:Restriction>
+                                        </owl:onClass>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasUser"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Scenario"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weekend_day -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weekend_day">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Saturday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sunday"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weight -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weight">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Friday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Monday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Thursday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Tuesday"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Wednesday"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Type_of_day"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#AIDS -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#AIDS">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Syndrome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Acute_Bronchitis -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Acute_Bronchitis">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Adult -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Adult">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Age"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#American_Football -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#American_Football">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Asthma -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Asthma">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Avoid_Small_Spaces -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Avoid_Small_Spaces">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bad_Ventilation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bad_Ventilation">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Basketball -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Basketball">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bookshop -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bookshop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Reading"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Boutique -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Boutique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Breast_Cancer -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Breast_Cancer">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Busy_Time -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Busy_Time">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Time_of_day"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cafe -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cafe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Child -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Child">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Age"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cinema_Going -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cinema_Going">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Concert_Going -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Concert_Going">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Coughing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Coughing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cycling -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cycling">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disinfectant -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disinfectant">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Group_Sport -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Group_Sport">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Individual_Sport -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Individual_Sport">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Drinking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Drinking">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Consuming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Inside -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Inside">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Outside -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Outside">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Consuming"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Facemask -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Facemask">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Female -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Female">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gender"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Fever -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Fever">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Football -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Football">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Friday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Friday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Glasses -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Glasses">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gloves -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gloves">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Go_To_The_Gym -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Go_To_The_Gym">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Good_Ventilation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Good_Ventilation">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Group_Transportation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Group_Transportation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Breathlessness -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Breathlessness">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Coughing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Coughing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Muscle_Ache -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Muscle_Ache">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Sneezing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Sneezing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Throat_Pain -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Throat_Pain">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Fever -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Fever">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Hockey -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Hockey">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Improper_Distancing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Improper_Distancing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Individual_Transportation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Individual_Transportation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Indoor_seating -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Indoor_seating">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Kings_Day -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Kings_Day">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID_known"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Library -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Library">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Reading"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Fever -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Fever">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_Cancer -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_Cancer">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Male -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Male">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gender"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Meeting_People -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Meeting_People">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Breathlessness -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Breathlessness">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Coughing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Coughing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Muscle_Ache -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Muscle_Ache">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Sneezing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Sneezing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Throat_Pain -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Throat_Pain">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Monday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Monday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Negative_Test -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Negative_Test">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Infection_test"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#New_Years_Eve -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#New_Years_Eve">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Non_Busy_Time -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Non_Busy_Time">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Time_of_day"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Old -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Old">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Age"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#On_Weight -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#On_Weight">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weight"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Outdoor_seating -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Outdoor_seating">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Overweight -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Overweight">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weight"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Positive_Test -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Positive_Test">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Infection_test"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Proper_Distancing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Proper_Distancing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Prostate_Cancer -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Prostate_Cancer">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Racing -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Racing">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Reading -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Reading">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Respirator -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Respirator">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Restaurant -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Rugby -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Rugby">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Running -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Running">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Saturday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Saturday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weekend_day"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Double -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Double">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Group -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Group">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Single -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Single">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Friends_Weekly -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Friends_Weekly">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Grandparents_Weekly -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Grandparents_Weekly">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shop -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shopping -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shopping">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sinterklaasdag -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sinterklaasdag">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Public_holiday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Smoking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Smoking">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risky_habits"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Stadium -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Stadium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+        <hasActivity rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Concert_Going"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Strong_Lungs -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Strong_Lungs">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_quality"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sunday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sunday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weekend_day"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#TV_Watching -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#TV_Watching">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Leisure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Child_To_School -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Child_To_School">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Granny_To_Doctor -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Granny_To_Doctor">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Takeaway -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Takeaway">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Thursday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Thursday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Tuesday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Tuesday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Underweight -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Underweight">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weight"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Walking -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Walking">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sporting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weak_Lungs -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weak_Lungs">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Lung_quality"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Wednesday -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Wednesday">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Workday"/>
+        <hasRiskLevel rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Negative_Test"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Positive_Test"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasKnownCOVID"/>
+                <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Known"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#hasHealth"/>
+                        <owl:hasValue rdf:resource="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#COVID-19"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Health"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Time"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#Transportation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ottomattas/ontologies/2020/8/untitled-ontology-7#User"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Activity"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Location_parameters"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risk"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_obligations"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_preferences"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#User_protective_gear"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cancer"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eating_disorder"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heart_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Liver_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Pulminory_disease"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Syndrome"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Covid_symptom"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disease_type"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Health_parameters"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Risky_habits"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Adult"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Child"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Old"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Avoid_Small_Spaces"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Group_Sport"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Do_Individual_Sport"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Inside"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Eat_Outside"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Friends_Weekly"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#See_Grandparents_Weekly"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bad_Ventilation"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Good_Ventilation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Bookshop"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Boutique"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Cafe"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Library"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Restaurant"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Shop"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Stadium"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Busy_Time"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Non_Busy_Time"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Coughing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Fever"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Breathlessness"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Coughing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Muscle_Ache"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Sneezing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Heavy_Throat_Pain"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Fever"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Fever"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Breathlessness"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Coughing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Muscle_Ache"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Sneezing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Minor_Throat_Pain"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Disinfectant"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Facemask"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Glasses"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Gloves"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Respirator"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Female"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Friday"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Monday"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Thursday"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Tuesday"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Wednesday"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Go_To_The_Gym"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Child_To_School"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Take_Granny_To_Doctor"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Group_Transportation"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Individual_Transportation"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#High_Risk"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Low_Risk"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Medium_Risk"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Improper_Distancing"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Proper_Distancing"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Indoor_seating"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Outdoor_seating"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Indoor_seating"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Outdoor_seating"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Takeaway"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Kings_Day"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#New_Years_Eve"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sinterklaasdag"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Negative_Test"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Positive_Test"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#On_Weight"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Overweight"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Underweight"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Saturday"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Sunday"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Double"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Group"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Seating_Single"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Strong_Lungs"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/AntonioOlivaH/intagents_group06/master/covid19planner.owl#Weak_Lungs"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
 
 
 
